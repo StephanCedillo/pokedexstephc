@@ -1,0 +1,135 @@
+.spinner-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 250px; 
+    margin-bottom: 20px; 
+    position: relative; 
+}
+
+.spinner {
+    background-image: linear-gradient(#acb6e5 35%, #86fde8);
+    width: 250px; 
+    height: 250px; 
+    animation: spinning21 1.7s linear infinite; 
+    border-radius: 50%; 
+    position: relative; 
+    filter: blur(1px);
+    box-shadow: 0px -5px 20px 0px rgb(186, 66, 255),
+                0px 5px 20px 0px rgb(0, 225, 255);
+}
+
+.black {
+    background-color: #000;
+    width: 95%; 
+    height: 95%; 
+    border-radius: 50%; 
+    position: absolute; /* Necesario para superponer */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centra el fondo negro */
+    z-index: 1; /* Asegura que esté detrás de la imagen */
+}
+
+.fixed-image {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 30%; 
+    height: auto; 
+    pointer-events: none; 
+}
+
+@keyframes spinning21 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+button {
+    font-size: 1em;
+    padding: 0.6em 0.6em;
+    border-radius: 0.5em;
+    border: none;
+    margin: 0.15em;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px #000000b4;
+    transition: transform 0.2s ease; /* Añadido para la expansión */
+    box-shadow: 0px -5px 20px 0px rgb(186, 66, 255),
+                0px 5px 20px 0px rgb(0, 225, 255);
+}
+
+.icon {
+    width: 25px; /* Ajusta el tamaño de la imagen */
+    height: 25px; /* Ajusta el tamaño de la imagen */
+    display: block;
+    margin: auto; /* Centra la imagen dentro del botón */
+    border-radius: 50%; /* Hace la imagen redonda */
+}
+
+.container {
+    position: relative;
+    padding: 3px;
+    background-image: linear-gradient(#acb6e5 35%, #86fde8);
+    border-radius: 0.9em;
+    transition: all 0.4s ease;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 0.9em;
+    z-index: -10;
+    filter: blur(0);
+    transition: filter 0.4s ease;
+}
+
+.container:hover::before {
+    background-image: linear-gradient(#acb6e5 35%, #86fde8);
+    filter: blur(1.78em);
+}
+
+.container:active::before {
+    filter: blur(0.2em);
+}
+
+.container:hover button {
+    transform: scale(1.1); /* Aumentar el tamaño del botón en hover */
+}
+
+.botones {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.botones2 {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pad-control {
+    display: flex;
+    flex-direction: row; /* Mantiene el diseño horizontal */
+    align-items: center;
+}
+
+.flechas-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px; /* Espaciado horizontal */
+}

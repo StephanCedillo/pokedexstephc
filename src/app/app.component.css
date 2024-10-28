@@ -1,0 +1,26 @@
+.template {
+    position: relative;
+    max-width: 576px;
+    height: 150vh;
+    background: linear-gradient(to bottom, #e8e8e8, rgb(236, 224, 224));
+    font-family: Fancake;
+    border-radius: 5px;
+    overflow: hidden; /* Asegúrate de que los bordes no se salgan */
+    box-shadow: 0 4px 15px rgba(57, 57, 57, 0.2); /* Ajusta los valores según tus preferencias */
+}
+
+.template::before {
+    content: '';
+    position: absolute;
+    top: -3px; /* Ajusta según el grosor del borde */
+    left: -3px; /* Ajusta según el grosor del borde */
+    right: -3px; /* Ajusta según el grosor del borde */
+    bottom: -3px; /* Ajusta según el grosor del borde */
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b); /* Ajusta los colores del degradado */
+    border-radius: 8px; /* Asegúrate de que se alinee con el borde de .template */
+    z-index: -1; /* Asegúrate de que esté detrás del contenido */
+}
+
+.template {
+    border: 3px solid black; /* Si quieres un borde negro dentro del degradado */
+}

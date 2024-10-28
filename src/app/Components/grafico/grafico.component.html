@@ -1,0 +1,66 @@
+<div class="graph">
+    <section class="states">
+        <span class="title">Id: {{pokemonId || 'N/A'}}</span>
+    </section>
+    <section class="states">
+        <span class="title">Nombre: {{pokemonNombre || 'N/A'}}</span>
+    </section>
+    <section class="states">
+        <span class="title">Vida:</span>
+        <div class="loader">
+            <div class="slider slider-vida" [style.width]="pokemonVidaPorcentaje + '%'">
+                {{pokemonVida || 'N/A'}} / 100
+            </div>
+        </div>
+    </section>
+    <section class="states">
+        <span class="title">Ataque:</span>
+        <div class="loader">
+            <div class="slider slider-ataque" [style.width]="pokemonAtaque + '%'">
+                {{pokemonAtaque || 'N/A'}} / 100
+            </div>
+        </div>
+    </section>
+    <section class="states">
+        <span class="title">Defensa:</span>
+        <div class="loader">
+            <div class="slider slider-defensa" [style.width]="pokemonDefensa + '%'">
+                {{pokemonDefensa || 'N/A'}} / 80
+            </div>
+        </div>
+    </section>
+    <section class="states">
+        <span class="title">Rapidez:</span>
+        <div class="loader">
+            <div class="slider slider-rapidez" [style.width]="pokemonRapidez + '%'">
+                {{pokemonRapidez || 'N/A'}} / 90
+            </div>
+        </div>
+    </section>
+    <div class="flex-container">
+        <section class="states">
+            <span class="title">Tipo: {{pokemonTipo || 'N/A'}}</span>
+        </section>
+        <section class="states">
+            <span class="title">Habilidades: {{pokemonHabilidades?.join(', ') || 'N/A'}}</span>
+        </section>
+        <section class="states">
+            <span class="title">Altura: {{pokemonAltura || 'N/A'}} m</span>
+        </section>
+        <section class="states">
+            <span class="title">Ancho: {{pokemonAncho || 'N/A'}} m</span>
+        </section>
+        <section class="states">
+            <span class="title">Peso: {{pokemonPeso ? (pokemonPeso / 10).toFixed(1) + ' kg' : 'N/A'}}</span>
+        </section>
+        <section class="states">
+            <span class="title">Catch Rate: {{pokemonCatchRate || 'N/A'}}</span>
+        </section>
+        <section class="states">
+            <span class="title">Base Friendship: {{pokemonFriendship || 'N/A'}} ({{pokemonFriendship !== undefined ? (pokemonFriendship < 50 ? 'lower' : pokemonFriendship < 100 ? 'normal' : 'higher') : 'N/A'}})</span>
+        </section>
+        <section class="states">
+            <span class="title">Egg Groups: {{pokemonEggGroups?.join(', ') || 'N/A'}}</span>
+        </section>
+    </div>
+</div>

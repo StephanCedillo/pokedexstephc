@@ -1,0 +1,30 @@
+<div class="header"> 
+    <img src="https://i.pinimg.com/originals/95/47/26/954726e6657811f203677a48f719c933.png" class="img">
+    <div class="textInputWrapper">
+        <input 
+            placeholder="Ingresar Pokemon" 
+            type="text" 
+            class="textInput" 
+            [(ngModel)]="pokemonInput" 
+            (keyup.enter)="handleInput()">
+    </div> 
+    <button class="box" (click)="handleInput()">
+        <img src="https://cdn-icons-png.flaticon.com/512/11820/11820292.png">
+    </button>  
+</div>
+
+<section class="pokedex">
+    <app-pokedex
+    #pokedex
+    [pokemon]="selectedPokemon"
+    (pokemonChanged)="onPokemonChanged($event)"
+    (clickPokemon)="handlePokemon($event)">
+</app-pokedex>
+
+
+
+</section>
+
+<section class="graph">
+    <app-grafico [pokemon]="selectedPokemon"></app-grafico>
+</section>

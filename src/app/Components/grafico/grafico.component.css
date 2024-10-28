@@ -1,0 +1,79 @@
+/* Font Face */
+@font-face {
+    font-family: 'Fancake';
+    src: url('../../../../public/Font/Fancake.ttf');
+}
+
+.graph {
+    width: 100%;
+    padding: 1em; /* Ajustado el padding a 1em */
+    gap: 1em; /* Reducido el espacio entre elementos */
+    border-radius: 10px; /* Opcional: bordes redondeados para el contenedor */
+}
+ 
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+    gap: 10px; /* Espacio entre los elementos */
+}
+
+.states {
+    flex: 1 1 calc(50% - 10px); /* Cada sección ocupará el 50% menos el espacio del gap */
+    box-sizing: border-box; /* Asegura que el padding y borde se incluyan en el ancho */
+    padding: 5px; /* Reducido el espaciado interno */
+    border: 1px solid #ccc; /* Opcional: agregar un borde para separar visualmente las secciones */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo suave */
+    margin-bottom: 5px; /* Espaciado entre secciones */
+}
+
+.title {
+    font-family: Fancake;
+    color: #212121;
+    font-weight: bold;
+}
+
+.loader {
+    color: #140d0d;
+    background-color: white; /* Fondo blanco para las barras */
+    margin: 0 15px;
+    height: 15px; /* Reducir la altura del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px -1px 10px 0px rgb(186, 66, 255),
+                0px 1px 10px 0px rgb(0, 225, 255); /* Sombra de caja para el loader */
+}
+
+.slider {
+    font-family: Fancake;
+    font-size: 15px; /* Reducir el tamaño de fuente */
+    height: 100%; /* Altura del slider igual a la del contenedor */
+    border-radius: 10px; /* Bordes redondeados del slider */
+    background-color: #2697f3; /* Color del slider */
+    transition: width 0.5s ease; /* Animación suave al cambiar de tamaño */
+}
+
+/* Colores con degradados para los sliders */
+.slider-vida {
+    background: linear-gradient(90deg, #4caf50, #81c784); /* Verde a verde claro */
+}
+
+.slider-ataque {
+    background: linear-gradient(90deg, #f44336, #ef5350); /* Rojo a rojo claro */
+}
+
+.slider-defensa {
+    background: linear-gradient(90deg, #2196f3, #64b5f6); /* Azul a azul claro */
+}
+
+.slider-rapidez {
+    background: linear-gradient(90deg, #ff9800, #ffb74d); /* Naranja a naranja claro */
+}
+
+.slider-habilidades {
+    background: linear-gradient(90deg, #9c27b0, #ba68c8); /* Púrpura a púrpura claro */
+}
+
+.separator {
+    margin: 0.5px 0; /* Espaciado vertical alrededor del separador */
+}

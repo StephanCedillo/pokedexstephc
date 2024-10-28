@@ -1,0 +1,49 @@
+<div class="spinner-container">
+    <div class="spinner">
+        <div class="black"></div>
+    </div>
+
+    <!-- Imágenes de sprites -->
+    <img *ngIf="currentSprite" [src]="currentSprite" class="fixed-image" alt="Sprite del Pokémon">
+</div>
+
+<div class="botones">
+    <div class="container">
+        <button class="boton">
+            <img src="https://cdn-icons-png.flaticon.com/512/1248/1248824.png" alt="volver icon" class="icon" (click)="volverAlPokemon()" > <!-- Icono de volver -->
+        </button>
+    </div>
+
+    <div class="botones2">
+        <div class="pad-control">
+            <div class="container">
+                <button class="flecha boton" (click)="previousPokemon()">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3148/3148319.png" alt="left arrow" class="icon"> <!-- Flecha izquierda -->
+                </button>
+            </div>
+            <div class="flechas-vertical">
+                <div class="container">
+                    <button class="flecha boton" (click)="previousSprites()">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3148/3148422.png" alt="up arrow" class="icon"> <!-- Flecha arriba -->
+                    </button>
+                </div>
+                <div class="container">
+                    <button class="flecha boton" (click)="nextSprites()">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3148/3148325.png" alt="down arrow" class="icon"> <!-- Flecha abajo -->
+                    </button>
+                </div>
+            </div>
+            <div class="container">
+                <button class="flecha boton" (click)="nextPokemon()">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3148/3148383.png" alt="right arrow" class="icon"> <!-- Flecha derecha -->
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="boton">
+            <img src="https://cdn-icons-png.flaticon.com/512/11820/11820292.png" alt="star icon" class="icon"> <!-- Estrella -->
+        </button>
+    </div>
+</div>
